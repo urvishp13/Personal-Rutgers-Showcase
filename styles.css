@@ -142,12 +142,12 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transform: translate(-90%);
+    transition: transform 0.7s ease-in-out;
     position: relative;
 }
 
 .guide-section:hover {
     transform: translate(0);
-    transition: transform 0.7s ease-in-out;
 }
 
 .guide-section .logo {
