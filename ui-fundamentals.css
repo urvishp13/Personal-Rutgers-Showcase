@@ -6,12 +6,17 @@ body {
     text-align: center;
 }
 
+/* ///////////// HERO SECTION ///////////// */
+
 .hero-section {
     display: grid;
     align-content: center;
-    justify-items: start;
+    justify-items: end;
     height: 100vh;
-    width: fit-content;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0 1.75em 0 3.5em;
 }
 
 .hero-img {
@@ -20,26 +25,41 @@ body {
     background-size: cover;
     width: 70%;
     right: 0;
+    top: 0;
 }
 
-.hero-section .logo {
+.title {
+    font-size: 3.5rem;
+    color: #0F0404;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+span {
+    position: relative;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    height: .2em;
+    width: 60%;
+    background: #CF4044;
+    left: 0;
+    bottom: .15em;
+    z-index: -1;
+}
+
+.logo {
     width: 100px;
-    justify-self: end;
-    margin-bottom: 10px;
-    background:rgba(229, 226, 226, 0.393);
-    padding: 10px;
+    background:#d6dcdf;
+    padding: .625em;
     border-radius: 10px;
 }
 
-.hero-section .title {
-    text-align: right;
-    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 65%,  rgb(204, 64, 66, 0));
-    padding: .5em;
-    padding-left: 1em;
-    font-size: 3.5rem;
-    color: #0F0404;
-    
-}
 
 /* .hero-section .title {
     width: 68%;
