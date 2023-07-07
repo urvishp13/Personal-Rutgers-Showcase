@@ -114,12 +114,36 @@ span::before {
 /* ////////////// FOOTBALL VIDEO SECTION ////////////// */
 
 .football-section {
-    padding: 36px;
-    background: #C5CBD0;
-    font-size: 10px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   align-items: center;
+   position: relative;
+   padding: 2em;
 }
 
-.football-section .title {
+.football-section-title {
+    grid-column: 1 / span 6;
+    justify-self: end;
+    font-size: 1.75rem;
+    padding: .8em;
+}
+
+.football-section-title::before {
+    content: '';
+    position: absolute;
+    height: .3em;
+    width: 19.5%;
+    background: #880125;
+    left: 0;
+    top: 50%;
+}
+
+.video {
+    grid-column: 7 / span 6;
+    border-left: .4em solid #880125;
+    padding: 3em 1.5em;
+}
+/* .football-section .title {
     margin-top: 0px;
     background: #787B81;
     border-radius: 15px;
@@ -136,7 +160,7 @@ span::before {
     background:#cc4042;
     padding: 20px;
     border-radius: 10px;
-}
+} */
 
 .guide-section {
     /* make into a flexbox to put Rutgers logo and card side-by-side*/
