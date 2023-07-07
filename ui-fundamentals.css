@@ -1,9 +1,6 @@
 body {
     margin: 0;
-    /* Will apply one (Google) font to the entire document */
     font-family: 'Playfair Display', serif;
-    /* Center the text */
-    text-align: center;
 }
 
 /* ///////////// HERO SECTION ///////////// */
@@ -28,13 +25,13 @@ body {
     top: 0;
 }
 
-.title {
+.headline {
     font-size: 3.5rem;
     color: #0F0404;
     margin-bottom: 0;
 }
 
-.subtitle {
+.subheadline {
     font-size: 2rem;
 }
 
@@ -61,53 +58,60 @@ span::before {
     border-radius: 10px;
 }
 
+/* //////////////// EXPERIENCES SECTION /////////////// */
+
 .experiences-section {
-    padding: 36px;
-    padding-right: 0px;
-    font-size: 20px;
+   /* margin: 5em 0; */
+   padding: 3em 2.5em;
+   background: 
+        linear-gradient(
+            135deg, 
+            #86001F 4%, white 4%, white 8%, #86001F 8%, #86001F 12%, white 12%, white 16%, #86001F 16%,
+            #86001F 20%, white 20%, white 80%, #86001F 80%, #86001F 84%, white 84%, white 91%, #86001F 91% 
+        );
 }
 
-.experiences-section .title {
-    margin-top: 0px;
-    font-size: 2em;
+.experiences-section-title {
+    text-align: center;
+    font-size: 2.5rem;
 }
 
-.experiences-section .container {
+.experiences-section-container {
     /* flexbox this container */
     display: flex;
-    justify-content: space-between;
-    margin-top: 54px;
-    background: linear-gradient(to left, #cc404200 0%,#cc4042 67%,white 50%,white 100%);
-    padding: 20px;
+    justify-content: center;
+    margin-top: 4em;
 }
 
-.experiences-section img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 15%;
-    margin-bottom: 23px;
-}
-
-.experiences-section .experience {
-    flex-basis: 300px;
-    flex-grow: 1;
-    margin: 0px 20px;
-    padding: 20px;
-}
-
-.experiences-section .experience-one {
-    border: 5px solid #cc4042;
+.experience {
+    width: 25%;
     box-sizing: border-box;
+    position: relative;
+    border: .1em solid #86001F;
+    margin: 1em;
+    padding-left: 2em;
+    padding-top: 2em;
+    background: linear-gradient(
+        to left bottom, 
+        #86001F 5%, white 5%, white 10%, #86001F 10%, #86001F 15%, white 15%);
 }
 
-.experiences-section .experience .title {
-    font-size: 1.5em;
+.experience img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 5%;
 }
 
-.experiences-section .experience .desc {
-    font-size: 1.2em;
+.experience-title {
+    font-size: 1.75rem;
 }
+
+.experience-desc {
+    font-size: 1.5rem;
+    width: 90%;
+}
+
 
 .football-section {
     padding: 36px;
