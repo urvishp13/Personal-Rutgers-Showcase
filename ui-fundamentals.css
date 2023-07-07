@@ -40,16 +40,17 @@ body {
 
 span {
     position: relative;
+    /* text-shadow: 1px 1px 2px #C5012F; */
 }
 
 span::before {
     content: "";
     position: absolute;
-    height: .2em;
-    width: 60%;
+    width: .2em;
+    height: 60%;
     background: #CF4044;
     left: 0;
-    bottom: .15em;
+    bottom: 30%;
     z-index: -1;
 }
 
@@ -59,23 +60,6 @@ span::before {
     padding: .625em;
     border-radius: 10px;
 }
-
-
-/* .hero-section .title {
-    width: 68%;
-    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 65%,  rgb(204, 64, 66, 0));
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    
-}
-
-.hero-section .subtitle {
-    width: 62%;
-    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 60%,  rgb(204, 64, 66, 0));
-    font-size: 0.75em;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-} */
 
 .experiences-section {
     padding: 36px;
