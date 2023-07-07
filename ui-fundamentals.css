@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    /* Will apply one (Google) font to the entire document */
+    font-family: 'Playfair Display', serif;
+    /* Center the text */
+    text-align: center;
+}
+
+.hero-section {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    height: 100vh;
+    width: fit-content;
+}
+
+.hero-img {
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    width: 70%;
+    right: 0;
+}
+
+.hero-section .logo {
+    width: 100px;
+    justify-self: end;
+    margin-bottom: 10px;
+    background:rgba(229, 226, 226, 0.393);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hero-section .title {
+    text-align: right;
+    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 65%,  rgb(204, 64, 66, 0));
+    padding: .5em;
+    padding-left: 1em;
+    font-size: 3.5rem;
+    color: #0F0404;
+    
+}
+
+/* .hero-section .title {
+    width: 68%;
+    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 65%,  rgb(204, 64, 66, 0));
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.hero-section .subtitle {
+    width: 62%;
+    background-image: linear-gradient(to left, rgba(204, 64, 66, 1) 60%,  rgb(204, 64, 66, 0));
+    font-size: 0.75em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+.experiences-section {
+    padding: 36px;
+    padding-right: 0px;
+    font-size: 20px;
+}
+
+.experiences-section .title {
+    margin-top: 0px;
+    font-size: 2em;
+}
+
+.experiences-section .container {
+    /* flexbox this container */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    background: linear-gradient(to left, #cc404200 0%,#cc4042 67%,white 50%,white 100%);
+    padding: 20px;
+}
+
+.experiences-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15%;
+    margin-bottom: 23px;
+}
+
+.experiences-section .experience {
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin: 0px 20px;
+    padding: 20px;
+}
+
+.experiences-section .experience-one {
+    border: 5px solid #cc4042;
+    box-sizing: border-box;
+}
+
+.experiences-section .experience .title {
+    font-size: 1.5em;
+}
+
+.experiences-section .experience .desc {
+    font-size: 1.2em;
+}
+
+.football-section {
+    padding: 36px;
+    background: #C5CBD0;
+    font-size: 10px;
+}
+
+.football-section .title {
+    margin-top: 0px;
+    background: #787B81;
+    border-radius: 15px;
+    padding: 5px 13px;
+    width: fit-content;
+    margin: 0 auto;
+    color: #0F0404;
+    text-shadow: 0px 0px 2px white, 0px 0px 2px black;
+    font-size: 2.75em;
+}
+
+.football-section .video {
+    margin-top: 15px;
+    background:#cc4042;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.guide-section {
+    /* make into a flexbox to put Rutgers logo and card side-by-side*/
+    display: flex;
+    margin: 50px 0px;
+    width: 67%;
+    justify-content: space-around;
+    background:#cc4042;
+    padding: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(-90%);
+    transition: transform 0.7s ease-in-out;
+    position: relative;
+}
+
+.guide-section:hover {
+    transform: translate(0);
+}
+
+.guide-section .logo {
+    width: 200px;
+    object-fit: contain;
+    visibility: hidden;
+}
+
+.guide-section .card {
+    /* make into a flexbox to put Urvish's image and his info side-by-side */
+    display: flex;
+    width: 600px;
+    padding: 20px;
+    background:#787B81;
+    box-shadow: 0px 0px 10px black;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.guide-section:hover .logo,
+.guide-section:hover .card {
+    animation-name: make-visible;
+    animation-fill-mode: forwards;
+}
+
+@keyframes make-visible {
+    50%, 100% {
+        visibility: visible;
+    }
+}
+
+.guide-section .guide-img {
+    object-fit: cover;
+}
+
+.guide-section .title {
+    font-size: 1.5em;
+}
+
+.guide-section .guide-info  {
+    margin-left: 20px;
+    background: rgb(229, 226, 226);
+    padding: 0px 10px;
+}
+
+.guide-section .guide-name {
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+.guide-section .hover-instructions {
+    position: absolute;
+    top: 50%;
+    right: -3.5%;
+    margin: auto 0;
+    transform: rotate(270deg);
+    font-size: 2em;
+    color:rgb(229, 226, 226);
+    text-shadow: 0px 0px 1px #0F0404;
+}
+
+.guide-section:hover .hover-instructions {
+    visibility: hidden;
+}
+
+/* Utility class */
+.border-black {
+    border: 1px solid black;
+}
+
