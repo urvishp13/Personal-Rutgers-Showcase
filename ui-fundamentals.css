@@ -14,6 +14,7 @@ body {
     box-sizing: border-box;
     text-align: right;
     padding: 0 1.75em 0 3.5em;
+    color: #0F0404;
 }
 
 .hero-img {
@@ -27,7 +28,6 @@ body {
 
 .headline {
     font-size: 3.5rem;
-    color: #0F0404;
     margin-bottom: 0;
 }
 
@@ -37,7 +37,7 @@ body {
 
 span {
     position: relative;
-    /* text-shadow: 1px 1px 2px #C5012F; */
+    font-weight: 600;
 }
 
 span::before {
@@ -51,7 +51,7 @@ span::before {
     z-index: -1;
 }
 
-.logo {
+.hero-section .logo {
     width: 100px;
     background:#d6dcdf;
     padding: .625em;
@@ -61,7 +61,7 @@ span::before {
 /* //////////////// EXPERIENCES SECTION /////////////// */
 
 .experiences-section {
-   /* margin: 5em 0; */
+   /* margin-top: 3em; */
    padding: 3em 2.5em;
    background: 
         linear-gradient(
@@ -118,6 +118,7 @@ span::before {
    align-items: center;
    position: relative;
    padding: 2em;
+   /* margin: 1.5em 0; */
 }
 
 .football-section-title {
@@ -143,14 +144,21 @@ span::before {
     padding: 3em 1.5em;
 }
 
+/* ///////////////////// GUIDE SECTION ///////////////////// */
+
 .guide-section {
-    /* make into a flexbox to put Rutgers logo and card side-by-side*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.guide-section-container {
+    grid-column: 1 / span 9;
     display: flex;
-    margin: 50px 0px;
-    width: 67%;
     justify-content: space-around;
-    background:#cc4042;
-    padding: 50px;
+    align-items: center;
+    margin: 2.7em 0;
+    padding: 3.13em;
+    background: #86001F;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transform: translate(-90%);
@@ -158,36 +166,64 @@ span::before {
     position: relative;
 }
 
-.guide-section:hover {
+.guide-section-container:hover {
     transform: translate(0);
+    animation: 5s ease-in forwards make-visible;
 }
 
-.guide-section .logo {
-    width: 200px;
+.guide-section .logo,
+.guide-section .logo-copy {
+    width: 12.5em;
     object-fit: contain;
     visibility: hidden;
+    background: #38000D;
+    padding: 1.5em;
+    border-radius: 10%;
 }
 
-.guide-section .card {
+.guide-section .logo-copy {
+    grid-column: 10 / 13;
+    align-self: center;
+    margin-left: 4em;
+    background: #d6dcdf;
+    visibility: visible;
+    opacity: 0;
+}
+
+
+.guide-card {
     /* make into a flexbox to put Urvish's image and his info side-by-side */
     display: flex;
-    width: 600px;
-    padding: 20px;
+    width: 32em;
+    padding: 1.25em;
+    box-sizing: border-box;
     background:#787B81;
     box-shadow: 0px 0px 10px black;
     font-size: 20px;
     visibility: hidden;
+    text-align: center;
 }
 
-.guide-section:hover .logo,
-.guide-section:hover .card {
+.guide-section-container:hover .logo,
+.guide-section-container:hover .guide-card {
     animation-name: make-visible;
     animation-fill-mode: forwards;
 }
 
 @keyframes make-visible {
-    50%, 100% {
+    to {
         visibility: visible;
+    }
+}
+
+.guide-section-container:hover + img {
+    animation-name: make-logo-copy-visible;
+    animation: make-logo-copy-visible .7s ease-in-out forwards;
+}
+
+@keyframes make-logo-copy-visible {
+    100% {
+        opacity: 1;
     }
 }
 
@@ -221,7 +257,7 @@ span::before {
     text-shadow: 0px 0px 1px #0F0404;
 }
 
-.guide-section:hover .hover-instructions {
+.guide-section-container:hover .hover-instructions {
     visibility: hidden;
 }
 
