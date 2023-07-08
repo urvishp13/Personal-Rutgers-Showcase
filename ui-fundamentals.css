@@ -168,7 +168,6 @@ span::before {
 
 .guide-section-container:hover {
     transform: translate(0);
-    animation: 5s ease-in forwards make-visible;
 }
 
 .guide-section .logo,
@@ -236,9 +235,9 @@ span::before {
 }
 
 .guide-info  {
-    margin-left: 20px;
+    margin-left: 1.25em;
     background: rgb(229, 226, 226);
-    padding: 0px 10px;
+    padding: 0 .63em;
 }
 
 .guide-name {
