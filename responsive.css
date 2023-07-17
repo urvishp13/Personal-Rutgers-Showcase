@@ -6,14 +6,6 @@ body {
 /* ///////////// HERO SECTION ///////////// */
 
 .hero-section {
-    /* display: grid;
-    align-content: center;
-    justify-items: end;
-    height: 100vh;
-    width: 30%;
-    box-sizing: border-box;
-    text-align: right;
-    padding: 0 1.75em 0 3.5em; */
     color: #0F0404;
     text-align: center;
     height: 100vh;
@@ -60,7 +52,6 @@ span::before {
 /* //////////////// EXPERIENCES SECTION /////////////// */
 
 .experiences-section {
-   /* margin-top: 3em; */
    padding: 3em 2.5em;
    background: 
         linear-gradient(
@@ -142,118 +133,57 @@ span::before {
 
 /* ///////////////////// GUIDE SECTION ///////////////////// */
 
-.guide-section {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
 .guide-section-container {
-    grid-column: 1 / span 9;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2.7em 0;
-    padding: 3.13em;
-    background: #86001F;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transform: translate(-90%);
-    transition: transform 0.7s ease-in-out;
-    position: relative;
-}
-
-.guide-section-container:hover {
-    transform: translate(0);
-}
-
-.guide-section .logo,
-.guide-section .logo-copy {
-    width: 12.5em;
-    object-fit: contain;
-    visibility: hidden;
-    background: #38000D;
+    margin-top: 2.7em;
     padding: 1.5em;
-    border-radius: 10%;
+    background: #86001F;
+    transition: transform 0.7s ease-in-out;
 }
 
-.guide-section .logo-copy {
-    grid-column: 10 / 13;
-    align-self: center;
-    margin-left: 4em;
-    background: #d6dcdf;
-    visibility: visible;
-    opacity: 0;
+.guide-section-container > img,
+.guide-section-container > .hover-instructions,
+.guide-section-container + img {
+    display: none;
 }
-
 
 .guide-card {
     /* make into a flexbox to put Urvish's image and his info side-by-side */
-    display: flex;
-    width: 32em;
-    padding: 1.25em;
+    width: 100%;
     box-sizing: border-box;
     background:#787B81;
     box-shadow: 0px 0px 10px black;
-    font-size: 1.25em;
-    visibility: hidden;
     text-align: center;
-}
-
-.guide-section-container:hover .logo,
-.guide-section-container:hover .guide-card {
-    animation-name: make-visible;
-    animation-fill-mode: forwards;
-}
-
-@keyframes make-visible {
-    to {
-        visibility: visible;
-    }
-}
-
-.guide-section-container:hover + img {
-    animation-name: make-logo-copy-visible;
-    animation: make-logo-copy-visible .7s ease-in-out forwards;
-}
-
-@keyframes make-logo-copy-visible {
-    100% {
-        opacity: 1;
-    }
+    position: relative;
 }
 
 .guide-img {
     object-fit: cover;
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    transform: translate(-50%, 30%);
+    border: .3em solid #787B81;
 }
 
 .guide-card-title {
-    font-size: 1.5em;
+    font-size: 1.2rem;
+    padding-top: 1em;
 }
 
 .guide-info  {
-    margin-left: 1.25em;
     background: rgb(229, 226, 226);
     padding: 0 .63em;
+    font-size: 1rem;
 }
 
 .guide-name {
     font-weight: 700;
-    font-size: 1.25em;
-}
-
-.guide-section .hover-instructions {
-    position: absolute;
-    top: 50%;
-    right: -3.5%;
-    margin: auto 0;
-    transform: rotate(270deg);
-    font-size: 2em;
-    color:rgb(229, 226, 226);
-    text-shadow: 0px 0px 1px #0F0404;
-}
-
-.guide-section-container:hover .hover-instructions {
-    visibility: hidden;
+    font-size: 1.125em;
+    padding-bottom: 1em;
 }
 
 /* Utility class */
