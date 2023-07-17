@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ///////////// HERO SECTION ///////////// */
+
+.hero-section {
+    /* display: grid;
+    align-content: center;
+    justify-items: end;
+    height: 100vh;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0 1.75em 0 3.5em; */
+    color: #0F0404;
+    text-align: center;
+    height: 100vh;
+}
+
+.hero-img {
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 5.5em;
+}
+
+.headline {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+.subheadline {
+    font-size: 1.25rem;
+}
+
+span {
+    position: relative;
+    font-weight: 600;
+}
+
+span::before {
+    content: "";
+    position: absolute;
+    width: .2em;
+    height: 60%;
+    background: #CF4044;
+    left: 0;
+    bottom: 30%;
+    z-index: -1;
+}
+
+.hero-section .logo {
+    width: 4em;
+    background:#d6dcdf;
+    padding: .625em;
+    border-radius: 10px;
+}
+
+/* //////////////// EXPERIENCES SECTION /////////////// */
+
+.experiences-section {
+   /* margin-top: 3em; */
+   padding: 3em 2.5em;
+   background: 
+        linear-gradient(
+            135deg, 
+            #B50025 4%, white 4%, white 8%, #B50025 8%, #B50025 12%, white 12%,  white 80%, #B50025 80%, 
+            #B50025 84%, white 84%, white 91%, #B50025 91% 
+        );
+}
+
+.experiences-section-title {
+    text-align: center;
+    font-size: 1.25rem;
+    background: white;
+}
+
+.experiences-section-container {
+    margin-top: 4em;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.experience {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border: .1em solid #B50025;
+    padding: 2em 2em 0;
+    background: 
+        linear-gradient(
+            to left bottom, 
+            #B50025 5%, white 5%, white 10%, #B50025 10%, #B50025 15%, white 15%
+        );
+    margin-bottom: 1em;
+}
+
+.experience img {
+    width: 100%;
+    /* height: 10em; */
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+}
+
+.experience-desc {
+    font-size: 1rem;
+}
+
+/* ////////////// FOOTBALL VIDEO SECTION ////////////// */
+
+.football-section {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   align-items: center;
+   position: relative;
+   padding: 2em;
+   /* margin: 1.5em 0; */
+}
+
+.football-section-title {
+    grid-column: 1 / span 6;
+    justify-self: end;
+    font-size: 1.75rem;
+    padding: .8em;
+}
+
+.football-section-title::before {
+    content: '';
+    position: absolute;
+    height: .3em;
+    width: 19.5%;
+    background: #880125;
+    left: 0;
+    top: 50%;
+}
+
+.video {
+    grid-column: 7 / span 6;
+    border-left: .4em solid #880125;
+    padding: 3em 1.5em;
+}
+
+/* ///////////////////// GUIDE SECTION ///////////////////// */
+
+.guide-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.guide-section-container {
+    grid-column: 1 / span 9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2.7em 0;
+    padding: 3.13em;
+    background: #86001F;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(-90%);
+    transition: transform 0.7s ease-in-out;
+    position: relative;
+}
+
+.guide-section-container:hover {
+    transform: translate(0);
+}
+
+.guide-section .logo,
+.guide-section .logo-copy {
+    width: 12.5em;
+    object-fit: contain;
+    visibility: hidden;
+    background: #38000D;
+    padding: 1.5em;
+    border-radius: 10%;
+}
+
+.guide-section .logo-copy {
+    grid-column: 10 / 13;
+    align-self: center;
+    margin-left: 4em;
+    background: #d6dcdf;
+    visibility: visible;
+    opacity: 0;
+}
+
+
+.guide-card {
+    /* make into a flexbox to put Urvish's image and his info side-by-side */
+    display: flex;
+    width: 32em;
+    padding: 1.25em;
+    box-sizing: border-box;
+    background:#787B81;
+    box-shadow: 0px 0px 10px black;
+    font-size: 1.25em;
+    visibility: hidden;
+    text-align: center;
+}
+
+.guide-section-container:hover .logo,
+.guide-section-container:hover .guide-card {
+    animation-name: make-visible;
+    animation-fill-mode: forwards;
+}
+
+@keyframes make-visible {
+    to {
+        visibility: visible;
+    }
+}
+
+.guide-section-container:hover + img {
+    animation-name: make-logo-copy-visible;
+    animation: make-logo-copy-visible .7s ease-in-out forwards;
+}
+
+@keyframes make-logo-copy-visible {
+    100% {
+        opacity: 1;
+    }
+}
+
+.guide-img {
+    object-fit: cover;
+}
+
+.guide-card-title {
+    font-size: 1.5em;
+}
+
+.guide-info  {
+    margin-left: 1.25em;
+    background: rgb(229, 226, 226);
+    padding: 0 .63em;
+}
+
+.guide-name {
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+.guide-section .hover-instructions {
+    position: absolute;
+    top: 50%;
+    right: -3.5%;
+    margin: auto 0;
+    transform: rotate(270deg);
+    font-size: 2em;
+    color:rgb(229, 226, 226);
+    text-shadow: 0px 0px 1px #0F0404;
+}
+
+.guide-section-container:hover .hover-instructions {
+    visibility: hidden;
+}
+
+/* Utility class */
+.border-black {
+    border: 1px solid black;
+}
+
