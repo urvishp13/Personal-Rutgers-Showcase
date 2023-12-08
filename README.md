@@ -26,8 +26,8 @@ Utilize classes, flexbox, background-image, and a color palette.
 
 ### Screenshot
 
-![Desktop View of webpage](image.png)
-![Mobile View of webpage](image-1.png)
+![Desktop View of webpage](src/screenshots/image.png)
+![Mobile View of webpage](src/screenshots/image-1.png)
 
 ### Links
 
